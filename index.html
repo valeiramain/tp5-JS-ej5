@@ -26,7 +26,7 @@
 
         <form class="container">
             <!-- Inputs de hora, minuto y segundo -->
-            <div class="d-flex justify-content-center gap-3 py-3 my-3 ">
+            <div class="d-flex justify-content-center gap-3 py-3 my-3  border border-secondary rounded shadow m-5 ">
                 <div class="d-flex flex-column align-items-center">
                     <input type="number" id="inputHoras"
                         class="form-control text-center bg-secondary text-light border-0 w-sm-75 fs-1" placeholder="00" min="0" max="24">
@@ -51,14 +51,14 @@
 
             <!-- Botones -->
             <div class="d-flex justify-content-center gap-2">
-                <button id="btnIniciar" class="btn btn-warning">Iniciar</button>
-                <button id="btnReiniciar" class="btn btn-secondary">Reiniciar</button>
+                <button type="submit" class="btn btn-warning">Iniciar</button>
+                <button type="button" class="btn btn-secondary">Reiniciar</button>
             </div>
         </form>
 
         <!-- Contador -->
         <section class="d-flex justify-content-center border border-secondary rounded shadow m-5 ">
-            <h2 id="contador" class="display-1 fw-bold my-3 text-light">00:00:00</h2>
+            <h2 class="display-1 fw-bold my-3 text-light"></h2>
         </section>
 
     </main>
