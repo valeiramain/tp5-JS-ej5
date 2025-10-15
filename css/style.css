@@ -9,3 +9,16 @@ main {
   flex-grow: 1;
   background: linear-gradient(135deg, #7aabf4, #29384e);
 }
+
+.colorBtnIniciar{
+  background-color: rgb(223, 128, 90);
+}
+
+.colorBtnReIniciar{
+  background-color: rgb(149, 205, 46);
+
+}
+
+.colorBtnPausar{
+  background-color: rgb(229, 224, 93);
+}
