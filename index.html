@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,27 +16,54 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-secondary">
             <div class="container">
-                <a class="navbar-brand" href="#">Temporizador ⌚ </a>
+                <a class="navbar-brand text-light" href="#">Temporizador ⏲️ </a>
             </div>
         </nav>
     </header>
-    <main class="container text-center">
-        <section class="container mt-4 bg-body-tertiary my-3 py-3">
-            <div class="row g-0 d-flex justify-content-center">
-                <div class="col-auto text-white display-1 fw-bold d-flex justify-content-end p-2" id="hora"></div>
-                <div class="col-auto text-white display-1 fw-bold p-2"> : </div>
-                <div class="col-auto text-white display-1 fw-bold p-2" id="minutos"></div>
-                <div class="col-auto text-white display-1 fw-bold p-2"> : </div>
-                <div class="col-auto text-white display-6 p-2">
-                    <p class="d-flex justify-content-center mb-0 fw-bold" id="ampm"></p>
-                    <p class="d-flex justify-content-center mb-0 fw-bold" id="segundos"></p>
+    <main>
+
+        <form class="container">
+            <!-- Inputs de hora, minuto y segundo -->
+            <div class="d-flex justify-content-center gap-3 p-3 m-5  border border-secondary rounded shadow">
+                <div class="d-flex flex-column align-items-center">
+                    <input type="number" id="inputHoras"
+                        class="form-control text-center bg-secondary text-light border-0 w-sm-75 fs-1" placeholder="00" min="0" max="24">
+                    <label for="inputHoras" class="form-label mt-2 text-light">Horas</label>
+                </div>
+
+                <div class="d-flex flex-column align-items-center">
+                    <input type="number" id="inputMinutos"
+                        class="form-control text-center bg-secondary text-light border-0 w-sm-75 fs-1" placeholder="00" min="0"
+                        max="59">
+                    <label for="inputMinutos" class="form-label text-light mt-2">Minutos</label>
+                </div>
+
+                <div class="d-flex flex-column align-items-center">
+                    <input type="number" id="inputSegundos"
+                        class="form-control text-center bg-secondary text-light border-0 w-sm-75 fs-1" placeholder="00" min="0"
+                        max="59">
+                    <label for="inputSegundos" class="form-label text-light mt-2">Segundos</label>
                 </div>
             </div>
+
+
+            <!-- Botones -->
+            <div class="d-flex justify-content-center gap-2">
+                <button type="submit" class="btn colorBtnIniciar fs-4 flex-fill"><i class="bi bi-play-btn"></i> Iniciar</button>
+                <button type="button" class="btn colorBtnPausar fs-4 flex-fill"><i class="bi bi-pause-btn"></i> Pausar</button>
+                <button type="button" class="btn colorBtnReIniciar fs-4 flex-fill"><i class="bi bi-arrow-clockwise"></i> Reiniciar</button>
+            </div>
+        </form>
+
+        <!-- Contador -->
+        <section class="d-flex justify-content-center rounded shadow m-5 ">
+            <h2 class="display-1 fw-bold my-3 text-light"></h2>
         </section>
+
     </main>
-    <footer class="text-center py-3 bg-body-tertiary">
+    <footer class="text-center py-3 bg-secondary text-light">
         <p>&copy; Todos los derechos reservados</p>
     </footer>
 
