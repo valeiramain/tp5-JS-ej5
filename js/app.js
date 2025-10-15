@@ -1,6 +1,8 @@
 function iniciar(e) {
     e.preventDefault();
 
+//eventos
+
     const h = parseInt(inputHoras.value) || 0;
     const m = parseInt(inputMinutos.value) || 0;
     const s = parseInt(inputSegundos.value) || 0;
@@ -57,8 +59,13 @@ const btnReiniciar = document.querySelector('.colorBtnReIniciar');
 let tiempoTotalSeg = 0
 let intervalo = 0 //ID para detener el setInterval con clearInterval
 contador.textContent = '00:00:00'
+
+// btnPausar.classList.add('disabled')
+// btnReiniciar.classList.add('disabled')
+
 //eventos
-formulario.addEventListener('submit', iniciar)
+formulario.addEventListener('submit',iniciar)
+
 btnPausar.addEventListener('click', pausar)
 btnReiniciar.addEventListener('click', reIniciar)
 
